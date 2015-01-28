@@ -1,5 +1,5 @@
 
-./granDt.hs,1670
+./granDt.hs,1892
 participantes participantes3,4
 clubes clubes9,10
 jugadores jugadores10,11
@@ -26,24 +26,29 @@ nombresTodoslosJugadores nombresTodoslosJugadores52,53
 nombresTodoslosJugadores nombresTodoslosJugadores53,54
 type Evaluacion Evaluacion55,56
 type Fecha Fecha56,57
-nombreJug nombreJug57,58
-puntos puntos58,59
-minutos minutos59,60
-jugadoresFecha jugadoresFecha60,61
+nombreJug nombreJug58,59
+puntos puntos59,60
+minutos minutos60,61
 jugadoresFecha jugadoresFecha61,62
-jugoFechaJugador jugoFechaJugador64,65
+jugadoresFecha jugadoresFecha62,63
 jugoFechaJugador jugoFechaJugador65,66
-minutosFechaJugador minutosFechaJugador68,69
+jugoFechaJugador jugoFechaJugador66,67
 minutosFechaJugador minutosFechaJugador69,70
-evaluacion evaluacion72,73
-jugadasTorneo jugadasTorneo73,74
-eliminarVacios eliminarVacios74,75
-totalPuntosJugador totalPuntosJugador76,77
-totalPuntosJugador totalPuntosJugador77,78
-cantidadJugadasTorneo cantidadJugadasTorneo79,80
-promedioPuntosJugador promedioPuntosJugador81,82
-promedioPuntosJugador promedioPuntosJugador82,83
-maximo maximo84,85
-mejorJugadorPor mejorJugadorPor91,92
-aplicarCriterio aplicarCriterio93,94
-nombresJugadoresDeValorMenorADelPuesto nombresJugadoresDeValorMenorADelPuesto97,98
+minutosFechaJugador minutosFechaJugador70,71
+evaluacion evaluacion73,74
+jugadasTorneo jugadasTorneo74,75
+eliminarVacios eliminarVacios75,76
+totalPuntosJugador totalPuntosJugador78,79
+totalPuntosJugador totalPuntosJugador79,80
+cantidadJugadasTorneo cantidadJugadasTorneo81,82
+promedioPuntosJugador promedioPuntosJugador83,84
+promedioPuntosJugador promedioPuntosJugador84,85
+maximo maximo86,87
+mejorJugadorPor mejorJugadorPor93,94
+aplicarCriterio aplicarCriterio95,96
+equipoValido equipoValido98,99
+equipoValido equipoValido99,100
+cotizacionEquipo cotizacionEquipo100,101
+nombresDeParticipantes nombresDeParticipantes103,104
+nombresDeParticipantes nombresDeParticipantes104,105
+nombresJugadoresDeValorMenorADelPuesto nombresJugadoresDeValorMenorADelPuesto107,108

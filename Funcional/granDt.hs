@@ -55,6 +55,7 @@ nombresTodoslosJugadores = map nombre jugadores
 
 type Evaluacion = (String,Integer,Integer)
 type Fecha = [Evaluacion]
+
 nombreJug (nombre,_,_) = nombre
 puntos (_,puntos,_) = puntos
 minutos (_,_,minutos) = minutos
@@ -72,7 +73,8 @@ minutosFechaJugador fecha jugador
   | otherwise = 0
 evaluacion jugador fecha = [ x | x <- fecha, nombreJug x == jugador]
 jugadasTorneo jugador = eliminarVacios $ map (evaluacion jugador) fechas
-eliminarVacios lista = map head [x | x <- lista, x /= []] 
+eliminarVacios lista = map head [x | x <- lista, x /= []]
+
 -- 8. totalPuntosJugador
 totalPuntosJugador :: String -> Integer
 totalPuntosJugador jugador = sum $ map puntos (jugadasTorneo jugador)
@@ -93,6 +95,14 @@ mejorJugadorPor criterio = fst(maximo (map (aplicarCriterio criterio) nombresTod
 
 aplicarCriterio criterio jugador = (jugador, criterio jugador)
 
+-- 11. equipoValido
+equipoValido :: [String] -> Bool
+equipoValido lista = cotizacionEquipo lista < 60000000 && length lista == 11 
+cotizacionEquipo lista = sum (map cotizacionDe lista)
+
+-- 12. nombresDeParticipantes
+nombresDeParticipantes :: [String]
+nombresDeParticipantes = map fst participantes
 
 -- 13.
 nombresJugadoresDeValorMenorADelPuesto importe puestoE = [nombre x | x <- jugadores, cotizacion x <= importe && puesto x ==puestoE ]
