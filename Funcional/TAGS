@@ -1,0 +1,49 @@
+
+./granDt.hs,1670
+participantes participantes3,4
+clubes clubes9,10
+jugadores jugadores10,11
+fechas fechas17,18
+quinta quinta23,24
+sexta sexta24,25
+septima	septima25,26
+octava octava26,27
+nombre nombre29,30
+club club30,31
+puesto puesto31,32
+cotizacion cotizacion32,33
+equipoDe equipoDe33,34
+cotizacionDe cotizacionDe35,36
+cotizacionDe cotizacionDe36,37
+cotizacionDe' cotizacionDe'37,38
+cotizacionEquipoDe cotizacionEquipoDe40,41
+cotizacionEquipoDe cotizacionEquipoDe41,42
+fueUsadoPor fueUsadoPor44,45
+fueUsadoPor fueUsadoPor45,46
+nombresJugadoresClub nombresJugadoresClub48,49
+nombresJugadoresClub nombresJugadoresClub49,50
+nombresTodoslosJugadores nombresTodoslosJugadores52,53
+nombresTodoslosJugadores nombresTodoslosJugadores53,54
+type Evaluacion Evaluacion55,56
+type Fecha Fecha56,57
+nombreJug nombreJug57,58
+puntos puntos58,59
+minutos minutos59,60
+jugadoresFecha jugadoresFecha60,61
+jugadoresFecha jugadoresFecha61,62
+jugoFechaJugador jugoFechaJugador64,65
+jugoFechaJugador jugoFechaJugador65,66
+minutosFechaJugador minutosFechaJugador68,69
+minutosFechaJugador minutosFechaJugador69,70
+evaluacion evaluacion72,73
+jugadasTorneo jugadasTorneo73,74
+eliminarVacios eliminarVacios74,75
+totalPuntosJugador totalPuntosJugador76,77
+totalPuntosJugador totalPuntosJugador77,78
+cantidadJugadasTorneo cantidadJugadasTorneo79,80
+promedioPuntosJugador promedioPuntosJugador81,82
+promedioPuntosJugador promedioPuntosJugador82,83
+maximo maximo84,85
+mejorJugadorPor mejorJugadorPor91,92
+aplicarCriterio aplicarCriterio93,94
+nombresJugadoresDeValorMenorADelPuesto nombresJugadoresDeValorMenorADelPuesto97,98

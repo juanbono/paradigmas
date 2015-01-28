@@ -1,0 +1,53 @@
+%Base de Conocimiento
+% jugador(nombre,lista_items, hambre)
+jugador(stuart, [piedra,piedra,piedra,piedra,piedra,piedra,piedra,piedra], 3).
+jugador(tim, [madera,madera,madera,madera,madera,pan,carbon,carbon,carbon,pollo,pollo],8).
+jugador(steve,[madera,carbon,carbon,diamante,panceta,panceta,panceta],2).
+% lugar(nombre,lista_jugadores, oscuridad)
+lugar(playa, [stuart, tim], 2).
+lugar(mina, [steve], 8).
+lugar(bosque,[],6).
+% items comestibles
+comestible(pan).
+comestible(panceta).
+comestible(pollo).
+comestible(pescado).
+
+% 1. tieneItem/2
+tieneItem(Jugador,Item):-
+  jugador(Jugador,ListaItem,_), member(Item, ListaItem).
+
+% 2. sePreocupaPorSuSalud/1
+sePreocupaPorSuSalud(Jugador):-
+    jugador(Jugador,ListaItem,_),
+    comestible(Alimento),
+    comestible(Alimento1),
+    member(Alimento1,ListaItem),
+    member(Alimento,ListaItem),
+    Alimento \= Alimento1 .
+
+% 3. cantidadDeItem/3
+cantidadDeItem(Jugador,Item1,Cantidad):-
+    jugador(Jugador,ListaItem,_),
+    member(Item1,ListaItem),
+    findall(Item2,member(Item2,ListaItem), R),
+    findall(Long,length(R,Long),L),
+    sumlist(L,Cantidad).
+
+% 4. itemPopular/1
+itemPopular(Item) :-
+    jugador(_, L1, _),
+    member(Item, L1),
+    forall(jugador(_, L2, _), member(Item, L2)).
+
+% 5. itemExclusivo/2
+itemExclusivo(Item):-
+    jugador(_,L1,_),
+    member(Item,L1),
+    forall(jugador(_,L2,_),not(member(Item,L2))).
+
+% 2)
+% a. hayMonstruos/1
+hayMonstruos(Lugar):-
+    lugar(Lugar,_,Oscuridad),
+    Oscuridad > 6.
