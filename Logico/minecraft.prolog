@@ -88,7 +88,7 @@ nivelPeligrosidad(Lugar,Nivel):-
     not(hayMonstruos(Lugar)),
     porcentajeHambrientos(Lugar,Porcentaje),
     poblacionLugar(Lugar,Poblacion),
-    Nivel is Porcentaje/Poblacion.
+    Nivel is Porcentaje*100/Poblacion.
 
 nivelPeligrosidad(Lugar,Nivel):-
     hayMonstruos(Lugar),
