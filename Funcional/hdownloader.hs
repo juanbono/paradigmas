@@ -1,0 +1,62 @@
+-- hdownloader.hs
+
+type Descarga = (Nombre,[Archivo],Servidor,Prioridad)
+type Archivo = (URL,Tamanio,Compresion)
+type URL = String
+type Dominio = String
+type Nombre = String
+type Prioridad = Int
+type Tamanio = Int
+type Compresion = Int
+type PoliticaAsignacionAnchoBanda = String
+type Servidor = (Dominio,PoliticaAsignacionAnchoBanda)
+
+-- Archivos
+silberschatzParte1 :: Archivo
+silberschatzParte1 = ("www.megaupload.com/?d=CRK5NQB0",10,0)
+silberschatzParte2 = ("www.megaupload.com/?d=CRK5NQWE",9,0)
+parcialDentista = ("www.dentista.com",7,2)
+
+--Descargas
+descarga1 :: Descarga
+descarga2 :: Descarga 
+descarga1 = ("Sistemas Operativos - Silverschatz",[silberschatzParte1, silberschatzParte2], megaupload,5)
+descarga2 = ("Parcial de funcional Dentista", [parcialDentista],pdep,2)
+
+--servidores
+megaupload = ("www.megaupload.com","falta implementar")
+pdep = ("www.pdep.com","falta implementar")
+rapidshare = ("www.rapidshare.com","falta implementar")
+youtube = ("www.youtube.com","falta implementar")
+
+-- 1.
+nombreDescarga :: Descarga -> Nombre
+nombreDescarga (nombre,_,_,_) = nombre
+archivosDescarga :: Descarga -> [Archivo]
+archivosDescarga (_,archivos,_,_) = archivos
+servidorDescarga :: Descarga -> Servidor
+servidorDescarga (_,_,server,_) = server
+prioridadDescarga :: Descarga -> Prioridad
+prioridadDescarga (_,_,_,prioridad) = prioridad
+urlArchivo :: Archivo -> URL
+urlArchivo (url,_,_) = url
+tamanioArchivo :: Archivo -> Tamanio
+tamanioArchivo (_,tam,_) = tam
+compresionArchivo :: Archivo -> Compresion
+compresionArchivo (_,_,comp) = comp
+dominioServidor (dom,_) = dom
+politicaAsignamiento (_,pol) = pol
+
+-- 2.
+tamanioEnDisco :: Archivo -> Int 
+tamanioEnDisco archivo = tamanioArchivo archivo * (1 + compresionArchivo archivo)
+tamanioDescarga :: Descarga -> Int
+tamanioDescarga descarga = sum  $ map tamanioEnDisco (archivosDescarga descarga)
+
+--3. contiene/2
+contiene lista1 [] = False
+contiene [] lista2 = True
+contiene (x:xs) (y:ys)
+  | x == 
+-- 4.
+estaAlojado dominio archivo = 

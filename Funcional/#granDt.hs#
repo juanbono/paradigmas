@@ -102,9 +102,9 @@ equipoValido lista = cotizacionEquipo lista < 60000000 && length lista == 11
 cotizacionEquipo lista = sum (map cotizacionDe lista)
 
 -- 12. nombresDeParticipantes
+
 nombresDeParticipantes :: [String]
 nombresDeParticipantes = map fst participantes
 
 -- 13.
 nombresJugadoresDeValorMenorADelPuesto importe puestoE = [nombre x | x <- jugadores, cotizacion x <= importe && puesto x ==puestoE ]
-
